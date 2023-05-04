@@ -23,25 +23,25 @@
             //window.top.location.href = baseUrl + "/account/v2card/cardloadsuccess/" + quoteId;
             //window.top.location.href = baseUrl + "/#/top-up-my-card-status";
             console.log("Start world!");
-            window.parent.postMessage("MODAL_CLOSED", "*");
+            window.top.postMessage("MODAL_CLOSED", "*");
             console.log("Hello world!");
         } else if (window.location.search.indexOf("action=ordersuccess") > 0) {
             //window.top.location.href = baseUrl + "/account/v2card/cardordersuccess/" + quoteId;
             //window.top.location.href = baseUrl + "/#/top-up-my-card-status";
             console.log("Start world!");
-            window.parent.postMessage("MODAL_CLOSED", "*");
+            window.top.postMessage("MODAL_CLOSED", "*");
             console.log("Hello world!");
         } else if (window.location.search.indexOf("action=failure") > 0) {
             //window.top.location.href = baseUrl + "/account/v2card/cardloaddeclined/" + quoteId;
             //window.top.location.href = baseUrl + "/#/top-up-my-card-status";
             console.log("Start world!");
-            window.parent.postMessage("MODAL_CLOSED", "*");
+            window.top.postMessage("MODAL_CLOSED", "*");
             console.log("Hello world!");
         } else if (window.location.search.indexOf("action=cancel") > 0) {
             //window.top.location.href = baseUrl + "/account/v2card/cardloaderror/" + quoteId;
             //window.top.location.href = baseUrl + "/#/top-up-my-card-status";
             console.log("Start world!");
-            window.parent.postMessage("MODAL_CLOSED", "*");
+            window.top.postMessage("MODAL_CLOSED", "*");
             console.log("Hello world!");
         }
     </script>
