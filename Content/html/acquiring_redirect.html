@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        var baseUrl = window.location.protocol + "//" + window.location.hostname;
+
+        if (window.location.port > 0) {
+            baseUrl += ":" + window.location.port;
+        }
+
+        var loc = window.location.search;
+        var posQuoteId = loc.indexOf("&quoteId=");
+        var quoteId = loc.substring(posQuoteId + 9, loc.length);
+
+
+        if (window.location.search.indexOf("action=success") > 0) {
+            //window.top.location.href = baseUrl + "/account/v2card/cardloadsuccess/" + quoteId;
+            window.top.location.href = baseUrl + "/#/top-up-my-card-status";
+        } else if (window.location.search.indexOf("action=ordersuccess") > 0) {
+            //window.top.location.href = baseUrl + "/account/v2card/cardordersuccess/" + quoteId;
+            window.top.location.href = baseUrl + "/#/top-up-my-card-status";
+        } else if (window.location.search.indexOf("action=failure") > 0) {
+            //window.top.location.href = baseUrl + "/account/v2card/cardloaddeclined/" + quoteId;
+            window.top.location.href = baseUrl + "/#/top-up-my-card-status";
+        } else if (window.location.search.indexOf("action=cancel") > 0) {
+            //window.top.location.href = baseUrl + "/account/v2card/cardloaderror/" + quoteId;
+            window.top.location.href = baseUrl + "/#/top-up-my-card-status";
+        }
+    </script>
+</body>
+
+</html>
